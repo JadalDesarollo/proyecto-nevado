@@ -129,7 +129,7 @@
             
               if(empty($ad) || empty($email) || empty($telefon)) {
                   echo 'Please do not leave blank';
-              } else {
+              } else { 
                   echo 'Thank you for submitting.';
               }
             } else {

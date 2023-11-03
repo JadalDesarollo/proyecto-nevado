@@ -18,6 +18,7 @@
     </head>
     <body>
       <div class="preloader">
+        
           <figure> <img src="img/loader.png" alt="Image"> </figure>
         </div>
       <div class="page-transition"></div>
@@ -123,22 +124,30 @@
         <div class="container">
           <h2>
             <?php
-              if(isset($_POST['name']) && isset($_POST['email']) && isset($_POST['telefon']) && isset($_POST['message'])) {
-              $ad = $_POST['name'];
-              $email = $_POST['email'];
-              $telefon = $_POST['telefon'];
-              $mesaj = $_POST['message'];
-            
-              if(empty($ad) || empty($email) || empty($telefon) || empty($mesaj)) {
+           if(isset($_POST['name']) && isset($_POST['email']) && isset($_POST['telefon']) && isset($_POST['message'])) {
+            $ad = $_POST['name'];
+            $email = $_POST['email'];
+            $telefon = $_POST['telefon'];
+            $mesaj = $_POST['message'];
+        
+            if(empty($ad) || empty($email) || empty($telefon) || empty($mesaj)) {
                 echo 'Please do not leave blank';
-              } else {
-              $toEmail = 'example@example.com';
-              $emailSubject = 'New email from your contant form';
+            } else {
+                $toEmail = 'rafaelpajuelot@gmail.com';
+                $emailSubject = 'Nuevo correo electrónico desde tu formulario de contacto';
+                $fromEmail = 'nevado@nevado.jadalsoftware.pe';
+                $headers = "From: $fromEmail\r\n";
+                $headers .= "Reply-To: $fromEmail\r\n";
+        
+                // Envía el correo
+                mail($toEmail, $emailSubject, $mesaj, $headers);
+        
                 echo 'Thank you.';
-              }
-              } else {
-                  echo 'Please use the form';
-              }
+            }
+        } else {
+            echo 'Please use the form';
+        }
+        
             ?> 
           </h2>
           <div class="bosluk333"></div>
