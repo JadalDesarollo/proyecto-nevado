@@ -29,13 +29,13 @@
         <div class="site-menu">
           <ul class="menu">
             <li>
-              <a href="index.html">Inicio</a>
+              <a href="inicio.html">Inicio</a>
             </li>
             <li>
-              <a href="about-us.html">Sobre Nosotros</a>
+              <a href="sobre-nosotros.html">Sobre Nosotros</a>
             </li>
             <li>
-              <a href="services.html">Servicios</a> <span class="sb" style="font-size: 18px">+</span>
+              <a href="servicios.html">Servicios</a> <span class="sb" style="font-size: 18px">+</span>
               <ul class="dropdown-menu">
                 <li>
                   <a class="dropdown-item" href="estacion-servicio.html">Estación de Servicios</a>
@@ -49,7 +49,7 @@
               </ul>
             </li>
             <li>
-              <a href="contact-us.html">Contacto</a>
+              <a href="contacto.html">Contacto</a>
             </li>
             <li>
               <a href="https://www.visor.jadal.pe/">Comprobante Electrónico</a>
@@ -69,7 +69,7 @@
     <div class="container">
       <!-- Logo Menu Desktop -->
       <div class="logo">
-        <a href="index.html"><img src="img/logo.png" alt="Image"></a>
+        <a href="inicio.html"><img src="img/logo.png" alt="Image"></a>
       </div>
       <div class="site-menu">
         <div class="container">
@@ -98,13 +98,13 @@
         </div>
         <ul class="menueffect">
           <li>
-            <a href="index.html">Inicio</a>
+            <a href="inicio.html">Inicio</a>
           </li>
           <li>
-            <a href="about-us.html">Sobre Nosotros</a>
+            <a href="sobre-nosotros.html">Sobre Nosotros</a>
           </li>
           <li>
-            <a href="services.html">Servicios +</a>
+            <a href="servicios.html">Servicios +</a>
             <ul class="dropdown-menu">
               <li>
                 <a class="dropdown-item" href="estacion-servicio.html">Estación de Servicios</a>
@@ -118,23 +118,23 @@
             </ul>
           </li>
           <li>
-            <a href="contact-us.html">Contacto</a>
+            <a href="contacto.html">Contacto</a>
           </li>
         </ul>
       </div>
       <div class="hamburger-menu d-lg-none"></div>
     </div>
   </nav>
-  <header class="page-header wow fadeInUp" data-wow-delay="0.5s" data-background="img/page-header.jpg">
+  <header class="page-header page-header-form-contact wow fadeInUp" data-wow-delay="0.5s" data-background="img/page-header.jpg">
     <div class="container">
       <h2><?php
                             if (isset($_POST['email8'])) {
                                 $email = $_POST['email8'];
                                 if (empty($email)) {
-                                    echo 'Please do not leave blank';
+                                    echo 'Por favor, ingrese un email';
                                 } else {
-                                    $toEmail = 'tucorreodecorreo@example.com'; // Reemplaza con tu dirección de correo
-                                    $emailSubject = 'Nuevo correo de subscripción';
+                                    $toEmail = 'rafaelpajuelot@gmail.com';
+                                    $emailSubject = 'Nuevo correo de subscripcion';
                                     $fromEmail = 'nevado@nevado.jadalsoftware.pe';
                                     $headers = "From: $fromEmail\r\n";
                                     $headers .= "Reply-To: $fromEmail\r\n";
@@ -152,7 +152,7 @@
                             }
                             ?></h2>
       <p>Aquí puedes volver al</p><br>
-      <p><a href="index.html" class="custom-button"><strong>Inicio</strong></a></p>
+      <p><a href="inicio.html" class="custom-button"><strong>Inicio</strong></a></p>
     </div><!-- end container -->
   </header><!--Footer Alanı-->
   <footer class="footer">
@@ -238,13 +238,6 @@
   <script src="js/odometer.min.js"></script> 
   <script src="js/wow.min.js"></script> 
   <script src="js/scripts.js"></script> 
-  <script src="js/3d.jquery.js"></script> <!--Cursor Script-->
-   
-  <script>
-
-
-        init_pointer({
-        })
-  </script>
+  <script src="js/3d.jquery.js"></script> 
 </body>
 </html>

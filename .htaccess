@@ -1,5 +1,40 @@
-
-
+Options -MultiViews
 RewriteEngine On
+RewriteBase /
 
-ErrorDocument 404 https://garantiwebtasarim.com/industen-industrial-company/404.html
+# Reescribir la URL ra��z al archivo de inicio
+RewriteRule ^$ /inicio.html [L]
+
+# Reescribir las URLs de las páginas
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^404$ /404.html [L]
+
+
+
+RewriteRule ^inicio$ /inicio.html [L]  # Cambiando la regla para el archivo de inicio
+RewriteRule ^maquinaria-pesada$ /maquinaria-pesada.html [L]
+RewriteRule ^servicio-carga$ /servicio-carga.html [L]
+RewriteRule ^servicios$ /servicios.html [L]
+RewriteRule ^sobre-nosotros$ /sobre-nosotros.html [L]
+RewriteRule ^subscribe$ /subscribe.php [L]
+RewriteRule ^contacto$ /contacto.html [L]
+RewriteRule ^contactform$ /contactform.php [L]
+RewriteRule ^estacion-servicio$ /estacion-servicio.html [L]
+
+# Redirigir todas las páginas HTML a URLs sin la extensión ".html"
+
+RewriteRule ^contacto\.html$ /contacto [R=301,L]
+RewriteRule ^inicio\.html$ /inicio [R=301,L] 
+RewriteRule ^maquinaria-pesada\.html$ /maquinaria-pesada [R=301,L]
+RewriteRule ^servicio-carga\.html$ /servicio-carga [R=301,L]
+RewriteRule ^servicios\.html$ /servicios [R=301,L]
+RewriteRule ^sobre-nosotros\.html$ /sobre-nosotros [R=301,L]
+RewriteRule ^subscribe\.html$ /subscribe [R=301,L]
+RewriteRule ^estacion-servicio\.html$ /estacion-servicio [R=301,L]
+RewriteRule ^contactform\.php$ /contactform [R=301,L]
+
+# Configurar ErrorDocument 404
+ErrorDocument 404 /404.html
+
+
